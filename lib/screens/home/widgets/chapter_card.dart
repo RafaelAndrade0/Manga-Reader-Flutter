@@ -21,10 +21,11 @@ class _ChapterCardState extends State<ChapterCard> {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.red,
+                // color: Colors.red,
                 borderRadius: BorderRadius.all(
                   Radius.circular(20),
                 ),
+                border: Border.all(width: 3),
                 image: DecorationImage(
                   image: AssetImage(
                     'assets/images/header.jpg',
@@ -34,33 +35,62 @@ class _ChapterCardState extends State<ChapterCard> {
               ),
             ),
           ),
-          Text(
-            widget.manga?.title ?? 'Dragon Ball',
-            style: TextStyle(
-              fontSize: 20, letterSpacing: 2,
-              // fontFamily: "Anime Ace",
-            ),
-          ),
-          Text(
-            'Chapter 280',
-            style: TextStyle(
-              fontSize: 15,
-              color: Colors.grey[500],
-            ),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Icon(
-                Icons.star,
-                color: Colors.yellow[900],
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    widget.manga?.title ?? 'Dragon Ball',
+                    style: TextStyle(
+                      fontSize: 20, letterSpacing: 2,
+                      // fontFamily: "Anime Ace",
+                    ),
+                  ),
+                  Text(
+                    'Chapter 280',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                '9,8',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w800,
-                ),
+              Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.star,
+                    size: 50,
+                    color: Colors.orange,
+                  ),
+                  Stack(
+                    children: <Widget>[
+                      // Stroked text as border.
+                      Text(
+                        '9.8',
+                        style: TextStyle(
+                          fontFamily: 'Anime Ace',
+                          fontSize: 16,
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 4
+                            ..color = Colors.white,
+                        ),
+                      ),
+                      // Solid text as fill.
+                      Text(
+                        '9.8',
+                        style: TextStyle(
+                          fontFamily: 'Anime Ace',
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
