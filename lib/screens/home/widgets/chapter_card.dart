@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manga_reader_flutter/models/manga.dart';
+import 'package:manga_reader_flutter/screens/details/details_page.dart';
 
 class ChapterCard extends StatefulWidget {
   final Manga manga;
@@ -42,7 +43,12 @@ class _ChapterCardState extends State<ChapterCard> {
                 ),
               ),
               child: InkWell(
-                onTap: () => print('tap'),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsPage(),
+                  ),
+                ),
               ),
             ),
           ),
