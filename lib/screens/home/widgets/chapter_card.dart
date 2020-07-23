@@ -18,7 +18,7 @@ class _ChapterCardState extends State<ChapterCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: 180,
       margin: EdgeInsets.only(right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
