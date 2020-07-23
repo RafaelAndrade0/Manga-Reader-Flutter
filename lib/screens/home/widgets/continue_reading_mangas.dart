@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manga_reader_flutter/models/manga.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/chapter_card.dart';
 
 class ContinueReadingMangas extends StatelessWidget {
@@ -25,10 +26,11 @@ class ContinueReadingMangas extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                ChapterCard(),
-                ChapterCard(),
-                ChapterCard(),
-                ChapterCard(),
+                for (var manga in mangaList)
+                  ChapterCard(
+                    manga: manga,
+                    isDark: true,
+                  )
               ],
             ),
           ),

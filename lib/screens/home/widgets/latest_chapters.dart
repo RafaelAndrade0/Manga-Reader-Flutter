@@ -40,6 +40,7 @@ class LatestChapters extends StatelessWidget {
                 for (var manga in mangaList)
                   ChapterCard(
                     manga: manga,
+                    isDark: false,
                   )
               ],
             ),

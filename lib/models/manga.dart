@@ -64,8 +64,14 @@ class Manga {
 }
 
 List<Manga> mangaList = [
-  Manga(title: 'Dragon Ball', description: '', thumbImage: ''),
-  Manga(title: 'Bleach', description: '', thumbImage: ''),
+  Manga(
+      title: 'Dragon Ball',
+      description: '',
+      thumbImage: 'assets/images/header.jpg'),
+  Manga(
+      title: 'Attack on Titan',
+      description: '',
+      thumbImage: 'assets/images/aot.jpg'),
   Manga(title: 'Dragon Ball', description: '', thumbImage: ''),
   Manga(title: 'Dragon Ball', description: '', thumbImage: ''),
 ];

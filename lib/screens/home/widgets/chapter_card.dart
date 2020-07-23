@@ -3,8 +3,13 @@ import 'package:manga_reader_flutter/models/manga.dart';
 
 class ChapterCard extends StatefulWidget {
   final Manga manga;
+  final bool isDark;
 
-  const ChapterCard({Key key, @required this.manga}) : super(key: key);
+  const ChapterCard({
+    Key key,
+    @required this.manga,
+    @required this.isDark,
+  }) : super(key: key);
   @override
   _ChapterCardState createState() => _ChapterCardState();
 }
@@ -28,7 +33,9 @@ class _ChapterCardState extends State<ChapterCard> {
                 border: Border.all(width: 3),
                 image: DecorationImage(
                   image: AssetImage(
-                    'assets/images/header.jpg',
+                    widget.manga.thumbImage == ''
+                        ? 'assets/images/header.jpg'
+                        : widget.manga.thumbImage,
                   ),
                   fit: BoxFit.cover,
                 ),
@@ -38,24 +45,32 @@ class _ChapterCardState extends State<ChapterCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    widget.manga?.title ?? 'Dragon Ball',
-                    style: TextStyle(
-                      fontSize: 20, letterSpacing: 2,
-                      // fontFamily: "Anime Ace",
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      widget.manga.title ?? 'Dragon Ball',
+                      style: TextStyle(
+                        fontSize: 20,
+                        letterSpacing: 2,
+                        // fontFamily: "Anime Ace",
+                        color: widget.isDark ? Colors.white : Colors.black,
+                      ),
+                      maxLines: 1,
+                      // softWrap: false,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                  Text(
-                    'Chapter 280',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.grey[500],
+                    Text(
+                      'Chapter 280',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color:
+                            widget.isDark ? Colors.blue[300] : Colors.grey[500],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Stack(
                 alignment: Alignment.center,
