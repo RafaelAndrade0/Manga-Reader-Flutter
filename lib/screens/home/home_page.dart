@@ -34,9 +34,10 @@ class _HomePageState extends State<HomePage> {
         ],
         initialActiveIndex: 2, //optional, default as 0
         onTap: (int i) => print('click index=$i'),
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.grey[100],
+        activeColor: Colors.grey[900],
         style: TabStyle.textIn,
-        // color: Colors.grey[200],
+        color: Colors.grey[500],
       ),
     );
   }
