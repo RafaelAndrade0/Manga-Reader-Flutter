@@ -5,7 +5,7 @@ import 'package:manga_reader_flutter/screens/home/widgets/chapter_card.dart';
 class ContinueReadingMangas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Ink(
       color: Colors.blue[800],
       padding: EdgeInsets.all(10),
       child: Column(

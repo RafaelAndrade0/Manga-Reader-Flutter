@@ -24,7 +24,8 @@ class _ChapterCardState extends State<ChapterCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
-            child: Container(
+            child: Ink(
+              // width: 180,
               decoration: BoxDecoration(
                 // color: Colors.red,
                 borderRadius: BorderRadius.all(
@@ -39,6 +40,9 @@ class _ChapterCardState extends State<ChapterCard> {
                   ),
                   fit: BoxFit.cover,
                 ),
+              ),
+              child: InkWell(
+                onTap: () => print('tap'),
               ),
             ),
           ),
