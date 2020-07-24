@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:manga_reader_flutter/screens/details/widgets/manga_information.dart';
-import 'package:manga_reader_flutter/screens/details/widgets/manga_chapters.dart';
+import 'package:manga_reader_flutter/screens/details/manga_information/manga_information.dart';
+import 'package:manga_reader_flutter/screens/details/manga_chapters/manga_chapters.dart';
 
 class DetailsPage extends StatelessWidget {
   @override
