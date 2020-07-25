@@ -18,8 +18,9 @@ class ChapterCard extends StatefulWidget {
 class _ChapterCardState extends State<ChapterCard> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
-      width: 180,
+      width: size.width * .4,
       margin: EdgeInsets.only(right: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

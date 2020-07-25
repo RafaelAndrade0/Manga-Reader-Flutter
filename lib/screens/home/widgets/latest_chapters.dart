@@ -2,11 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:manga_reader_flutter/models/manga.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/chapter_card.dart';
 
-class LatestChapters extends StatelessWidget {
+class LatestChapters extends StatefulWidget {
+  final Size size;
+
+  const LatestChapters({Key key, @required this.size}) : super(key: key);
+
+  @override
+  _LatestChaptersState createState() => _LatestChaptersState();
+}
+
+class _LatestChaptersState extends State<LatestChapters> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.symmetric(horizontal: 10),
+      // padding: EdgeInsets.all(10),
       child: Column(
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -33,7 +44,7 @@ class LatestChapters extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
-            height: 320,
+            height: widget.size.height * .4,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[

@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:manga_reader_flutter/models/manga.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/chapter_card.dart';
 
-class ContinueReadingMangas extends StatelessWidget {
+class ContinueReadingMangas extends StatefulWidget {
+  final Size size;
+
+  const ContinueReadingMangas({Key key, @required this.size}) : super(key: key);
+  @override
+  _ContinueReadingMangasState createState() => _ContinueReadingMangasState();
+}
+
+class _ContinueReadingMangasState extends State<ContinueReadingMangas> {
   @override
   Widget build(BuildContext context) {
     return Ink(
@@ -22,7 +30,8 @@ class ContinueReadingMangas extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
-            height: 320,
+            height: widget.size.height * .4,
+            // height: 320,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[

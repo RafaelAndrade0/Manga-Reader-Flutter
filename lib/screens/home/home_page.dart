@@ -13,14 +13,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Header(),
-            LatestChapters(),
-            ContinueReadingMangas(),
+            Header(
+              size: size,
+            ),
+            LatestChapters(
+              size: size,
+            ),
+            ContinueReadingMangas(
+              size: size,
+            ),
           ],
         ),
       ),
