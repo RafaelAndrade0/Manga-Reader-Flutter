@@ -14,12 +14,9 @@ class LatestChapters extends StatefulWidget {
 class _LatestChaptersState extends State<LatestChapters> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10),
-      // padding: EdgeInsets.all(10),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,7 +27,6 @@ class _LatestChaptersState extends State<LatestChapters> {
                 style: TextStyle(
                   fontSize: 20,
                   letterSpacing: 2,
-                  // fontWeight: FontWeight.bold,
                   fontFamily: "Anime Ace",
                 ),
               ),

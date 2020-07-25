@@ -17,7 +17,6 @@ class CardSummary extends StatelessWidget {
         children: <Widget>[
           Container(
             width: size.width * 0.4,
-            // width: 180,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(20),
@@ -69,7 +68,6 @@ class CardSummary extends StatelessWidget {
                           ),
                           Stack(
                             children: <Widget>[
-                              // Stroked text as border.
                               Text(
                                 '9.8',
                                 style: TextStyle(
@@ -81,7 +79,6 @@ class CardSummary extends StatelessWidget {
                                     ..color = Colors.white,
                                 ),
                               ),
-                              // Solid text as fill.
                               Text(
                                 '9.8',
                                 style: TextStyle(
@@ -110,7 +107,6 @@ class CardSummary extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       Text(
                         'Dragon Ball Z',
@@ -127,7 +123,6 @@ class CardSummary extends StatelessWidget {
                   Divider(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       Text(
                         'Bleach',
@@ -144,7 +139,6 @@ class CardSummary extends StatelessWidget {
                   Divider(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    // crossAxisAlignment: CrossAxisAlignment.end,
                     children: <Widget>[
                       Text(
                         'Dragon Ball Super',

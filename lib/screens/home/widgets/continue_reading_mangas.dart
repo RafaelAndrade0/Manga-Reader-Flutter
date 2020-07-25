@@ -17,7 +17,6 @@ class _ContinueReadingMangasState extends State<ContinueReadingMangas> {
       color: Colors.blue[800],
       padding: EdgeInsets.all(10),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             'CONTINUE READING',
@@ -31,7 +30,6 @@ class _ContinueReadingMangasState extends State<ContinueReadingMangas> {
           SizedBox(height: 10),
           Container(
             height: widget.size.height * .4,
-            // height: 320,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[

@@ -14,10 +14,8 @@ class CardLastChapter extends StatelessWidget {
       padding: EdgeInsets.all(15),
       child: Container(
         height: size.height * 0.14,
-        // height: 120,
         width: double.infinity,
         decoration: (BoxDecoration(
-          // color: Colors.red,
           image: DecorationImage(
             fit: BoxFit.cover,
             image: AssetImage('assets/images/last_chapter_2.png'),

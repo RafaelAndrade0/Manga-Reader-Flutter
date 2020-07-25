@@ -19,7 +19,6 @@ class _HeaderState extends State<Header> {
       child: Container(
         alignment: Alignment.centerLeft,
         height: widget.size.height * .35,
-        // height: 300,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(

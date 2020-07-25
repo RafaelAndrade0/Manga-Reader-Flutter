@@ -1,6 +1,5 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:manga_reader_flutter/screens/home/widgets/characters.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/continue_reading_mangas.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/header.dart';
 import 'package:manga_reader_flutter/screens/home/widgets/latest_chapters.dart';
@@ -39,7 +38,7 @@ class _HomePageState extends State<HomePage> {
           TabItem(icon: Icons.message, title: 'Message'),
           TabItem(icon: Icons.people, title: 'Profile'),
         ],
-        initialActiveIndex: 2, //optional, default as 0
+        initialActiveIndex: 2,
         onTap: (int i) => print('click index=$i'),
         backgroundColor: Colors.grey[100],
         activeColor: Colors.grey[900],

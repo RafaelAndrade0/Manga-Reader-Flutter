@@ -27,9 +27,7 @@ class _ChapterCardState extends State<ChapterCard> {
         children: <Widget>[
           Expanded(
             child: Ink(
-              // width: 180,
               decoration: BoxDecoration(
-                // color: Colors.red,
                 borderRadius: BorderRadius.all(
                   Radius.circular(20),
                 ),
@@ -65,11 +63,9 @@ class _ChapterCardState extends State<ChapterCard> {
                       style: TextStyle(
                         fontSize: 20,
                         letterSpacing: 2,
-                        // fontFamily: "Anime Ace",
                         color: widget.isDark ? Colors.white : Colors.black,
                       ),
                       maxLines: 1,
-                      // softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
@@ -93,7 +89,6 @@ class _ChapterCardState extends State<ChapterCard> {
                   ),
                   Stack(
                     children: <Widget>[
-                      // Stroked text as border.
                       Text(
                         '9.8',
                         style: TextStyle(
@@ -105,7 +100,6 @@ class _ChapterCardState extends State<ChapterCard> {
                             ..color = Colors.white,
                         ),
                       ),
-                      // Solid text as fill.
                       Text(
                         '9.8',
                         style: TextStyle(

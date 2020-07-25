@@ -21,10 +21,8 @@ class CardDescription extends StatelessWidget {
             margin: EdgeInsets.only(
               top: 20,
             ),
-            // height: 200,
             height: size.height * .25,
             decoration: (BoxDecoration(
-              // color: Colors.red,
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
