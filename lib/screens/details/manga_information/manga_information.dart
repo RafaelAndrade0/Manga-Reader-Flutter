@@ -6,6 +6,7 @@ class MangaInformation extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
+        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Container(
             height: 320,
@@ -219,8 +220,50 @@ class MangaInformation extends StatelessWidget {
               right: 15,
               top: 15,
             ),
+            // child: Container(
+            //   height: 100,
+            //   width: double.infinity,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(
+            //       width: 3,
+            //       color: Colors.black,
+            //     ),
+            //     borderRadius: BorderRadius.all(Radius.circular(20)),
+            //     gradient: LinearGradient(
+            //       colors: [Colors.blueAccent, Colors.blue[800]],
+            //     ),
+            //   ),
+            //   child: Align(
+            //     alignment: Alignment.center,
+            //     child: Stack(
+            //       children: <Widget>[
+            //         // Stroked text as border.
+            //         Text(
+            //           'Read Last Chapter!',
+            //           style: TextStyle(
+            //             fontFamily: 'Anime Ace',
+            //             fontSize: 25,
+            //             foreground: Paint()
+            //               ..style = PaintingStyle.stroke
+            //               ..strokeWidth = 4
+            //               ..color = Colors.black,
+            //           ),
+            //         ),
+            //         // Solid text as fill.
+            //         Text(
+            //           'Read Last Chapter!',
+            //           style: TextStyle(
+            //             fontFamily: 'Anime Ace',
+            //             fontSize: 25,
+            //             color: Colors.white,
+            //           ),
+            //         ),
+            //       ],
+            //     ),
+            //   ),
+            // ),
             child: Container(
-              height: 100,
+              height: 120,
               width: double.infinity,
               decoration: (BoxDecoration(
                 // color: Colors.red,
