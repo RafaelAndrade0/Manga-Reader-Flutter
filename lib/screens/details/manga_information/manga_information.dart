@@ -15,21 +15,20 @@ class MangaInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          CardSummary(
-            size: size,
-            manga: manga,
-          ),
-          CardDescription(
-            size: size,
-            manga: manga,
-          ),
-          CardLastChapter(size: size),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        CardSummary(
+          size: size,
+          manga: manga,
+        ),
+        CardDescription(
+          size: size,
+          manga: manga,
+        ),
+        CardLastChapter(size: size),
+      ],
     );
   }
 }

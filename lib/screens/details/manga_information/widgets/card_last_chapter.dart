@@ -13,15 +13,13 @@ class CardLastChapter extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(15),
       child: Container(
-        height: size.height * 0.14,
+        height: size.height * 0.10,
         width: double.infinity,
         decoration: (BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.blueAccent, Colors.blue[800]],
           ),
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.elliptical(30, 100),
-              bottomRight: Radius.elliptical(30, 100)),
+          borderRadius: BorderRadius.all(Radius.circular(80)),
           boxShadow: [
             BoxShadow(
               blurRadius: 3,
@@ -40,10 +38,10 @@ class CardLastChapter extends StatelessWidget {
             children: <Widget>[
               // Stroked text as border.
               Text(
-                'Read Last Chapter!',
+                'Read The Last Chapter!',
                 style: TextStyle(
                   fontFamily: 'Anime Ace',
-                  fontSize: 25,
+                  fontSize: 20,
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 4
@@ -52,10 +50,10 @@ class CardLastChapter extends StatelessWidget {
               ),
               // Solid text as fill.
               Text(
-                'Read Last Chapter!',
+                'Read The Last Chapter!',
                 style: TextStyle(
                   fontFamily: 'Anime Ace',
-                  fontSize: 25,
+                  fontSize: 20,
                   color: Colors.white,
                 ),
               ),
