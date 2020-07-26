@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:manga_reader_flutter/models/manga.dart';
 
 class CardDescription extends StatelessWidget {
-  const CardDescription({
-    Key key,
-    @required this.size,
-  }) : super(key: key);
+  const CardDescription({Key key, @required this.size, @required this.manga})
+      : super(key: key);
 
   final Size size;
+  final Manga manga;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class CardDescription extends StatelessWidget {
             child: Container(
               height: 60,
               child: Image(
-                image: AssetImage('assets/images/db_logo.png'),
+                image: AssetImage(manga.logo ?? 'assets/images/db_logo.png'),
               ),
             ),
           ),

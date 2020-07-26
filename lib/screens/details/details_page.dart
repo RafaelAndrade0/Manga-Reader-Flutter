@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:manga_reader_flutter/models/manga.dart';
 import 'package:manga_reader_flutter/screens/details/manga_information/manga_information.dart';
 import 'package:manga_reader_flutter/screens/details/manga_chapters/manga_chapters.dart';
 
 class DetailsPage extends StatelessWidget {
+  final Manga manga;
+
+  const DetailsPage({Key key, @required this.manga}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -58,7 +63,9 @@ class DetailsPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(children: [
-          MangaInformation(),
+          MangaInformation(
+            manga: manga,
+          ),
           MangaChapters(),
         ]),
       ),

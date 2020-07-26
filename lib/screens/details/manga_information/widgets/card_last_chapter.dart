@@ -16,13 +16,12 @@ class CardLastChapter extends StatelessWidget {
         height: size.height * 0.14,
         width: double.infinity,
         decoration: (BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage('assets/images/last_chapter_2.png'),
+          gradient: LinearGradient(
+            colors: [Colors.blueAccent, Colors.blue[800]],
           ),
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
-          ),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.elliptical(30, 100),
+              bottomRight: Radius.elliptical(30, 100)),
           boxShadow: [
             BoxShadow(
               blurRadius: 3,
@@ -48,7 +47,7 @@ class CardLastChapter extends StatelessWidget {
                   foreground: Paint()
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 4
-                    ..color = Colors.white,
+                    ..color = Colors.black,
                 ),
               ),
               // Solid text as fill.
@@ -57,7 +56,7 @@ class CardLastChapter extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Anime Ace',
                   fontSize: 25,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ],

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:manga_reader_flutter/models/manga.dart';
 
 class CardSummary extends StatelessWidget {
-  const CardSummary({
-    Key key,
-    @required this.size,
-  }) : super(key: key);
+  const CardSummary({Key key, @required this.size, @required this.manga})
+      : super(key: key);
 
   final Size size;
+  final Manga manga;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,8 @@ class CardSummary extends StatelessWidget {
               ),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/images/header.jpg'),
+                image:
+                    AssetImage(manga.thumbImage ?? 'assets/images/header.jpg'),
               ),
             ),
           ),
@@ -39,7 +40,7 @@ class CardSummary extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Text(
-                    'Dragon Ball',
+                    manga.title ?? 'Title Placeholder',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -49,7 +50,7 @@ class CardSummary extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    'Last Chapter: #258',
+                    'Last Chapter: #${manga.lastChapter}',
                     style: TextStyle(
                       color: Colors.grey[500],
                       fontSize: 16,
@@ -69,7 +70,7 @@ class CardSummary extends StatelessWidget {
                           Stack(
                             children: <Widget>[
                               Text(
-                                '9.8',
+                                manga.score.toString() ?? '9.8',
                                 style: TextStyle(
                                   fontFamily: 'Anime Ace',
                                   fontSize: 16,
@@ -80,7 +81,7 @@ class CardSummary extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '9.8',
+                                manga.score.toString() ?? '9.8',
                                 style: TextStyle(
                                   fontFamily: 'Anime Ace',
                                   fontSize: 16,

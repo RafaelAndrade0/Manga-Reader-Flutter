@@ -45,7 +45,9 @@ class _ChapterCardState extends State<ChapterCard> {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => DetailsPage(),
+                    builder: (context) => DetailsPage(
+                      manga: widget.manga,
+                    ),
                   ),
                 ),
               ),
@@ -69,7 +71,7 @@ class _ChapterCardState extends State<ChapterCard> {
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
-                      'Chapter 280',
+                      'Chapter ${widget.manga.lastChapter}',
                       style: TextStyle(
                         fontSize: 15,
                         color:
@@ -90,7 +92,7 @@ class _ChapterCardState extends State<ChapterCard> {
                   Stack(
                     children: <Widget>[
                       Text(
-                        '9.8',
+                        widget.manga.score.toString() ?? '9.8',
                         style: TextStyle(
                           fontFamily: 'Anime Ace',
                           fontSize: 16,
@@ -101,7 +103,7 @@ class _ChapterCardState extends State<ChapterCard> {
                         ),
                       ),
                       Text(
-                        '9.8',
+                        widget.manga.score.toString() ?? '9.8',
                         style: TextStyle(
                           fontFamily: 'Anime Ace',
                           fontSize: 16,
