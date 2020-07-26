@@ -41,7 +41,7 @@ class CardDescription extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 50, horizontal: 25),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum, ante ac rhoncus elementum, nisi nunc vestibulum tortor, vitae vehicula nulla lacus vitae orci. Aliquam semper faucibus ex. Suspendisse posuere, lacus ut pretium luctus. nisi nunc vestibulum tortor, vitae vehicula nulla lacus vitae orci. Aliquam semper faucibus ex. Suspendisse posuere, lacus ut pretium luctus',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum, ante ac rhoncus elementum, nisi nunc vestibulum tortor, vitae vehicula nulla lacus vitae orci. Aliquam semper faucibus ex. Suspendisse posuere, lacus ut pretium luctus. nisi nunc vestibulum tortor, vitae vehicula nulla lacus vitae orci.',
                 style: TextStyle(
                   fontSize: 15,
                 ),

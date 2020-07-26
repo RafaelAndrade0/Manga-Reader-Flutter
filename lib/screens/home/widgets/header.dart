@@ -22,7 +22,7 @@ class _HeaderState extends State<Header> {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              'assets/images/header3.png',
+              'assets/images/header4.png',
             ),
             fit: BoxFit.cover,
           ),
